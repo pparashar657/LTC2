@@ -22,13 +22,13 @@ public class TableOfN {
 //			
 //			i++;
 //		}
-		int i = 0;
-		
-		do {
-			i++;
-			System.out.println(num +" * " + i +" = " + (num * i));
-			
-		} while(i <= 10);
+//		int i = 1;
+//		
+//		do {
+//			System.out.println(num +" * " + i +" = " + (num * i));
+//			
+//			i++;
+//		} while(i <= 10);
 		
 
 	}
