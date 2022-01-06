@@ -11,11 +11,13 @@ public class NthFibonacci {
 		System.out.println("Enter any number");
 		int n = sc.nextInt();
 		
-		//printNFibo(n);
+		//printNFibo2(n);
 		
-		int ans = findNthFibo(n);
+		printFiboUptoN(n);
 		
-		System.out.println("The " + n +"th Fibonacci number = " + ans);
+		//int ans = findNthFibo(n);
+		
+		//System.out.println("The " + n +"th Fibonacci number = " + ans);
 
 	}
 
@@ -46,7 +48,40 @@ public class NthFibonacci {
 		return first;
 	}
 	
-	static boolean checkFibo(int num) {
+	static void printNFibo2(int n) {
 		
+		int count = 0;
+		
+		int first = 0;
+		int second = 1;
+		int third;
+		while(count < n) {
+			System.out.print(second +" ");
+			
+			third = first + second;
+			
+			first = second;
+			second = third;
+			count++;
+		}
 	}
+	
+	static void printFiboUptoN(int num) {
+		int first = 0;
+		int second = 1;
+		int third;
+		while(second < num) {
+			System.out.print(second +" ");
+			
+			third = first + second;
+			
+			first = second;
+			second = third;
+		}
+	}
+	
+	
+//	static boolean checkFibo(int num) {
+//		
+//	}
 }
