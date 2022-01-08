@@ -34,28 +34,26 @@ public class Primes {
 		//printNPrime(num);
 		
 		
-		int count = 0;
-		int curr = 2;
-		
-		while(count < num) {
-			
-			boolean isPrime = true;
-			
-			for(int i = 2; i< curr; i++) {
-				if(curr % i == 0) {
-					isPrime = false;
-					break;
-				}
-			}
-			
-			if(isPrime) {
-				System.out.println(curr);
-				count++;
-			}
-			curr++;
-		}
-		
-		
+//		int count = 0;
+//		int curr = 2;
+//		
+//		while(count < num) {
+//			
+//			boolean isPrime = true;
+//			
+//			for(int i = 2; i< curr; i++) {
+//				if(curr % i == 0) {
+//					isPrime = false;
+//					break;
+//				}
+//			}
+//			
+//			if(isPrime) {
+//				System.out.println(curr);
+//				count++;
+//			}
+//			curr++;
+//		}
 	}
 	
 	/*
@@ -86,5 +84,13 @@ public class Primes {
 			}
 			curr++;
 		}
+	}
+	
+	/*
+	 * Print Prime numbers upto given number
+	 */
+	
+	static void printPrimeUptoN(int n) {
+		
 	}
 }
