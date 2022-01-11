@@ -9,6 +9,8 @@ public class Primes {
 		
 		System.out.println("Enter any number: ");
 		int num = sc.nextInt();
+
+//		printPrimeUptoN(num);
 		
 //		if(checkPrime(num)) {
 //			System.out.println("The number is prime");
@@ -54,6 +56,33 @@ public class Primes {
 //			}
 //			curr++;
 //		}
+
+
+//		-------- PrintPrimeUptoN ---------------
+
+		int curr = 2;
+
+		int count = 0;
+
+		while(curr < num) {
+
+			// Checking curr is prime or not
+			boolean isPrime = true;
+
+			for(int i = 2; i <= curr; i++) {
+				if(curr % i == 0) {
+					isPrime = false;
+					break;
+				}
+			}
+
+			if(isPrime) {
+				count++;
+			}
+			curr++;
+		}
+
+		System.out.println("Count = " + count);
 	}
 	
 	/*
@@ -61,12 +90,11 @@ public class Primes {
 	 */
 	
 	static boolean checkPrime(int num) {
-		for(int i = 2; i< num; i++) {
+		for(int i = 2; i*i <= num; i++) {
 			if(num % i == 0) {
 				return false;
 			}
 		}
-		
 		return true;
 	}
 	
@@ -87,10 +115,17 @@ public class Primes {
 	}
 	
 	/*
-	 * Print Prime numbers upto given number
+	 * Print Prime numbers upto given number:
+	 * Upto 20 - 2,3,5,7,11,13,17
 	 */
 	
 	static void printPrimeUptoN(int n) {
-		
+		int curr = 2;
+		while(curr < n) {
+			if(checkPrime(curr)) {
+				System.out.print(curr +" ");
+			}
+			curr++;
+		}
 	}
 }
