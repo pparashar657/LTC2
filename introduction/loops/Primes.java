@@ -103,7 +103,7 @@ public class Primes {
 	 */
 	static void printNPrime(int n) {
 		int count = 0;
-		int curr = 2;
+		int curr = 2 ;
 		
 		while(count < n) {
 			if(checkPrime(curr)) {
